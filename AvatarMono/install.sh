@@ -16,7 +16,7 @@ DLL_NAME="YourApp.dll"
 
 # Direct-download URL for the app package (must resolve straight to the
 # file, not a OneDrive viewer page — see notes from earlier).
-DOWNLOAD_URL=""
+DOWNLOAD_URL="https://francis-r.github.io/Avatar/AvatarMono/avatar-mono.zip"
 ARCHIVE_NAME="avatar-mono.zip"
 # ===============================================================
 
