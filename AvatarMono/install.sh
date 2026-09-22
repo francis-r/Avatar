@@ -24,6 +24,7 @@ INSTALL_DIR="/opt/${VENDOR}/${APP_NAME}"
 TMP_DIR="$(mktemp -d)"
 SERVICE_FILE="/etc/systemd/system/${SERVICE_NAME}.service"
 
+
 # ---------------------------------------------------------------
 # 0. Must run as root (needed for /opt, package install, systemd)
 # ---------------------------------------------------------------
@@ -107,10 +108,7 @@ fi
 echo "=== Installing ${APP_NAME} to ${INSTALL_DIR} ..."
 mkdir -p "${INSTALL_DIR}"
 
-cp "${SRC_DIR}/${EXE_NAME}" "${INSTALL_DIR}/"
-cp "${SRC_DIR}/${DLL_NAME}" "${INSTALL_DIR}/"
-# Optional: copy any other files, e.g. config, icons
-# cp "${SRC_DIR}/config.json" "${INSTALL_DIR}/"
+cp -r "${SRC_DIR}/." "${INSTALL_DIR}/"
 
 chown -R "${APP_USER}:${APP_USER}" "${INSTALL_DIR}" 2>/dev/null || true
 
